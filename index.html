@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Antonio | Desarrollador de Software Full Stack</title>
+    <meta name="theme-color" content="#211f1f">
+    <meta name="description" content="Desarrollador de Software especializado en creación de aplicaciones web modernas y soluciones tecnológicas innovadoras. Portfolio profesional con proyectos demostrativos.">
+    <meta name="author" content="Luis Antonio">
+    
+    <!-- Keywords -->
+    <meta name="keywords" content="Luis Antonio, desarrollador software, portfolio programador, proyectos desarrollo web, full stack developer, JavaScript, React, Node.js, aplicaciones web">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nottechguy.github.io/portafolio/">
+    <meta property="og:title" content="Luis Antonio | Portfolio de Desarrollo de Software">
+    <meta property="og:description" content="Portfolio profesional de Luis Antonio - Desarrollador Full Stack con experiencia en proyectos web complejos">
+    <meta property="og:image" content="https://nottechguy.github.io/portafolio/img/cover_photo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nottechguy.github.io/portafolio/">
+    <meta property="twitter:title" content="Luis Antonio | Desarrollador de Software Full Stack">
+    <meta property="twitter:description" content="Experto en desarrollo de aplicaciones web modernas y soluciones escalables">
+    <meta property="twitter:image" content="https://nottechguy.github.io/portafolio/img/cover_photo.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nottechguy.github.io/portafolio/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Luis Antonio Mendoza",
+        "jobTitle": "Desarrollador de Software Full Stack",
+        "url": "https://nottechguy.github.io/portafolio/",
+        "sameAs": [
+            "https://linkedin.com/in/luismendoza18",
+            "https://github.com/nottechguy"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Zihuatanejo",
+            "addressRegion": "Guerrero",
+            "addressCountry": "México"
+        }
+    }
+    </script>
+    <style>
+        /* CSS Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)),
+                        url('img/cover_photo.png');
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background: #007bff;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .hero button:hover {
+            background: #0056b3;
+        }
+
+        .hero-buttons {
+            display:block;
+        }
+
+        .hero-button {
+            width:100%;
+            display:block;
+            margin-bottom:14px
+        }
+
+        .cv-button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background: #28a745;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            align-items: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cv-button:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+
+        /* Projects Section */
+        .projects {
+            padding: 4rem 2rem;
+            background: #f4f4f4;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .project-card h3 {
+            margin:8px 0
+        }
+
+        .project-card > p:last-of-type {
+            color:#777777;
+            margin:10px 0px
+        }
+
+        .project-card a {
+            display:block;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Portafolio de Desarrollador Web</h1>
+            <p>Transformando ideas en realidad digital</p>
+            <div class="hero-buttons">
+                <button class="hero-button" onclick="location.href='#projects'">Ver mis proyectos</button>
+                <a href="cv_luis_antonio_mendoza.pdf" download class="cv-button hero-button">Descargar CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>Proyectos Destacados</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="img/viajes_globales.png" alt="Viajes">
+                <h3>Viajes Globales</h3>
+                <p>Blog de viajes con sistema de reservaciones y galería interactiva</p>
+                <p>Tecnologías: Gatsby, GraphQL, Contentful CMS</p>
+                <b style="color:rgb(165, 148, 26)">En desarrollo</b>
+            </div>
+            <!-- Sitio de Comida -->
+            <div class="project-card">
+                <img src="img/gordosredtacos.png" alt="Sitio web de comida">
+                <h3>Gordos Red Tacos</h3>
+                <p>Sitio web de restaurante con sistema de pedidos en línea</p>
+                <p>Tecnologías: HTML, CSS, JavaScript, React</p>
+                <a href="https://gordosredtacos.com/" target="_blank" rel="noopener noreferrer">gordosredtacos.com</a>
+            </div>
+
+            <!-- E-commerce -->
+            <div class="project-card">
+                <img src="img/urban_outfitters.png" alt="Sitio web de comercio electrónico">
+                <h3>Tienda urbanoutfitters</h3>
+                <p>Plataforma de comercio electrónico full-stack con pasarela de pagos</p>
+                <p>Tecnologías: MERN Stack (MongoDB, Express, React, Node.js)</p>
+                <a href="https://www.urbanoutfitters.com/" target="_blank" rel="noopener noreferrer">www.urbanoutfitters.com</a>
+            </div>
+
+            <!-- Sitio Empresarial -->
+            <div class="project-card">
+                <img src="img/principal.png" alt="Sitio web empresarial">
+                <h3>Soluciones Corporativas</h3>
+                <p>Sitio web empresarial con integración de CMS</p>
+                <p>Tecnologías: WordPress, PHP, JavaScript</p>
+                <a href="https://institucional.principal.com.mx/" target="_blank" rel="noopener noreferrer">institucional.principal.com.mx</a>
+            </div>
+
+            <div class="project-card">
+                <img src="img/goldenrepublic.png" alt="Bienes Raíces">
+                <h3>Golden Republic</h3>
+                <p>Plataforma de propiedades con mapa interactivo y filtros avanzados</p>
+                <p>Tecnologías: Next.js, Mapbox, Django</p>
+                <a href="https://goldenrepublic.com.mx/" target="_blank" rel="noopener noreferrer">goldenrepublic.com.mx</a>
+            </div>
+
+            <div class="project-card">
+                <img src="img/eventbrite.png" alt="Eventos">
+                <h3>EventBrite</h3>
+                <p>Sistema de gestión de eventos con calendario y tickets digitales</p>
+                <p>Tecnologías: Vue.js, Laravel, MySQL</p>
+                <a href="https://www.eventbrite.com.mx/" target="_blank" rel="noopener noreferrer">www.eventbrite.com.mx</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contáctame</h2>
+        <p>Correo: la.mendoza.1618@gmail.com</p>
+        <div class="social-links">
+            <a href="https://github.com/nottechguy">GitHub</a>
+            <a href="https://www.linkedin.com/in/luismendoza18">LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Luis Antonio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
